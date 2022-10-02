@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/addce8cc1e.js" crossorigin="anonymous"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/admin/header.css">
+    <link rel="stylesheet" href="/css/admin/history.css">
+    <script src="/js/admin/history.js" defer></script>
+    <title> STEP OF - 스텝오브 </title>
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <nav id="main-header">
+                <div class="main-header-wrapper">
+                    <a class="standard" href="/admin">STEPOF-CORP</a><a class="part" href="/admin/news">HISTORY 스토리</a>
+                </div>
+            </nav>
+            <nav id="nav-header">
+                <div id="menu-list">
+                    <li><a href="/admin/service">서비스</a></li> 
+                    <li><a href="/admin/history">스토리</a></li>
+                    <li><a href="/admin/news">소식</a></li>
+                    <li><a href="/admin/recruit">채용</a></li>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="popup">
+        <div class="popup-wrapper">
+            <button id="quit"><i class="fa-solid fa-xmark"></i></button>
+            <div id="popupLogo"><div class="popupStandard">STEPOF-CORP</div></div>
+            <input type="text" class="popupInput" id="popupId" placeholder="아이디를 입력하세요">
+            <input type="password" class="popupInput" id="popupPsword" placeholder="비밀번호를 입력하세요">
+            <button id="userCheck-btn"><i class="fa-solid fa-arrow-right-long"></i></button>        
+            <span id="popupDes">보안확인문제시 인사팀에 문의해주세요</span>
+        </div>
+    </div>
+    <div id="popup-background"></div>
+    <section id="main">
+        <div id="history">
+            <div id="add-history">
+                <div class="part-name">히스토리 추가하기</div>
+                <div id="add-history-wrapper">
+                    <div id="add-history-box">
+                        <div id="add-history-input" class="close">
+                            <div id="add-history-input-wrapper">
+                                <textarea id="input-content" placeholder="문구를 입력해주세요"></textarea>
+                                <div id="input-group">                            
+                                    <input type="date" name="input-date" id="input-date">
+                                    <input type="url" name="input-link" id="input-link" placeholder="URL을 입력해주세요">
+                                </div>
+                                <div id="add-history-submit">
+                                    <div id="add-history-submit-des">
+                                        <span class="add-history-submit-note">- 올바른 사진이 업로드되었는지, 맞춤법이 올바른지, 올바른 내용이 작성되었는지 마지막으로 확인해주세요</span>
+                                        <span class="add-history-submit-note">- 다음 버튼을 누르면 담당 팀장으로 전송되어 확인 및 결재되고 난 후 업로드됩니다</span>
+                                        <span class="add-history-submit-note">- 확인 및 결재되기 전까지 수정할 수 있습니다</span>
+                                    </div>
+                                    <button id="submit-btn"><i class="fa-solid fa-arrow-right-long"></i></button>
+                                </div> 
+                            </div>                    
+                        </div>
+                        <div id="add-history-box-btn" class="off"><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div id="all-history">
+                <div id="2022year" class="year-group">
+                    <div class="history-year">2022년</div>
+                </div>
+                <div id="2021year" class="year-group">
+                    <div class="history-year">2021년</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="setting">
+            <div id="setting-wrapper">
+                <div id="setting-box">
+                    <div class="option-group">
+                        <div class="optionArray-Btn selected" id="recent"><i class="fa-solid fa-arrow-up-wide-short"></i>최근 순</div>
+                        <div class="optionArray-Btn" id="older"><i class="fa-solid fa-arrow-up-short-wide"></i>오래된 순</div>
+                    </div>
+                    <hr class="option-line">
+                    <div class="option-group">
+                        <div class="optionYear-Btn"><span class="option-year">2022</span></div>
+                        <div class="optionYear-Btn"><span class="option-year">2021</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

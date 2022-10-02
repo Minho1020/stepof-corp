@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/addce8cc1e.js" crossorigin="anonymous"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>    
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/admin/header.css">
+    <link rel="stylesheet" href="/css/admin/newsAdd.css">
+    <script src="/js/admin/newsAdd.js" defer></script>
+    <title> STEP OF - 스텝오브 </title>
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <nav id="main-header">
+                <div class="main-header-wrapper">
+                    <a class="standard" href="/admin">STEPOF-CORP</a><a class="part" href="/admin/news">NEWS 소식</a>
+                </div>
+            </nav>
+            <nav id="nav-header">
+                <div id="menu-list">
+                    <li><a href="/">서비스</a></li> 
+                    <li><a href="/">스토리</a></li>
+                    <li><a href="/">소식</a></li>
+                    <li><a href="/">채용</a></li>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section id="newsAdd">
+        <div id="newsAdd-title">
+            <textarea name="title" id="title" placeholder="제목을 입력하세요"></textarea>
+        </div>
+        <div id="newsAdd-contents">
+            <div id="newsAdd-image">
+                <label id="imageLabel" for="image">
+                    <img src="" id="previewImage">
+                </label>
+                <input type="file" name="image" id="image" accept="image/*">
+                <i class="fa-solid fa-plus"></i>
+                <span id="newsAdd-image-des">메인 사진을 추가해주세요</span>
+            </div>
+            <div id="newsAdd-content">
+                <div id="content" contenteditable="true"></div>
+                <div id="newsAdd-content-toolbar-menu">
+                    <div class="newsAdd-content-toolbar-group" id="newsAdd-content-toolbar-bold">
+                        <button class="newsAdd-content-toolbar-btn" id="bold"><i class="fa-solid fa-bold"></i></button>
+                    <div class="newsAdd-content-toolbar-group" id="newsAdd-content-toolbar-fontSize">
+                        <button class="newsAdd-content-toolbar-btn" id="fontSizeUp"><i class="fa-solid fa-plus"></i></button>
+                        <span class="newsAdd-content-toolbar-screen"></span>
+                        <button class="newsAdd-content-toolbar-btn" id="fontSizeDown"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                    <div class="newsAdd-content-toolbar-group" id="newsAdd-content-toolbar-fontColor">
+                        <button class="newsAdd-content-toolbar-btn" id="fontColor"><i class="fa-solid fa-brush"></i></button>
+                    </div>
+                    <div class="newsAdd-content-toolbar-group" id="newsAdd-content-toolbar-align">
+                        <button class="newsAdd-content-toolbar-btn" id="align-left"><i class="fa-solid fa-align-left"></i></button>
+                        <button class="newsAdd-content-toolbar-btn" id="align-center"><i class="fa-solid fa-align-center"></i></button>
+                        <button class="newsAdd-content-toolbar-btn" id="align-right"><i class="fa-solid fa-align-right"></i></button>
+                        <button class="newsAdd-content-toolbar-btn" id="align-justify"><i class="fa-solid fa-align-justify"></i></button>
+                    </div>
+                    <div class="newsAdd-content-toolbar-group" id="newsAdd-content-toolbar-addImage">
+                        <button class="newsAdd-content-toolbar-btn" id="addImage"><i class="fa-solid fa-image"></i></button>
+                    </div>
+                    <div class="newsAdd-content-toolbar-group" id="newsAdd-content-toolbar-link">
+                        <button class="newsAdd-content-toolbar-btn" id="addLink"><i class="fa-solid fa-link"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="newsAdd-submit">
+            <div id="newsAdd-submit-des">
+                <span class="newsAdd-submit-note">- 올바른 사진이 업로드되었는지, 맞춤법이 올바른지, 올바른 내용이 작성되었는지 마지막으로 확인해주세요</span>
+                <span class="newsAdd-submit-note">- 다음 버튼을 누르면 담당 팀장으로 전송되어 확인 및 결재되고 난 후 업로드됩니다</span>
+                <span class="newsAdd-submit-note">- 확인 및 결재되기 전까지 수정할 수 있습니다</span>
+            </div>
+            <button id="pass-btn"><i class="fa-solid fa-arrow-right-long"></i></button>
+        </div>
+    </section>
+</body>
+</html>

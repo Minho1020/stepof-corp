@@ -1,0 +1,115 @@
+#story-landing {
+    display: flex;
+    margin-top: 77px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #5786FF;
+    height: 60vh;
+}
+#story-landing > span {
+    font-family: 'NanumSquareAceb';
+    font-size: 50px;
+    color: white;
+}
+#story-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#story-title-main {
+    font-family: 'NanumSquareAceb';
+    font-size: 40px;
+    color: white;
+    margin: 20px 0;
+}
+#story-title-sub {
+    margin: 10px 0;
+    width: 60%;
+    text-align: center;
+    font-family: 'NanumSquareAcr';
+    font-size: 22px;
+    color: white;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+}
+#story {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#story-wrapper{
+    display: flex;
+    margin: 50px 0;
+    width: 70%;
+    min-width: 1200px;
+    flex-direction: column;
+    align-items: center;
+}
+.story-year {
+    font-size: 35px;
+    padding-bottom: 10px;
+    width: 100%;
+    margin: 30px 0;
+    font-family: 'NanumSquareAceb';
+    border-bottom: solid 1px rgba(136, 136, 136, 0.3);
+    color: #222;
+}
+.story-card {
+    display: flex;
+    width: calc(50%);
+    height: 90px;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.type-one {
+    align-self: flex-end;
+}
+.type-two {
+    align-self: flex-start;
+}
+.story-icon {
+    color: #5786FF;
+    font-size: 35px;
+}
+.type-one .story-icon > i {
+    transform: rotateZ(105deg);
+}
+.type-two .story-icon > i {
+    transform: rotateZ(75deg);
+}
+.type-one .story-content {
+    margin-left: 50px;
+    align-items: flex-start;
+}
+.type-two .story-content {
+    margin-right: 50px;
+    align-items: flex-end;
+}
+.story-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.story-date {
+    font-size: 18px;
+    font-family: 'NanumSquareAcr';
+    color: #777;
+}
+.story-title {
+    font-size: 22px;
+    display: flex;
+    color: #333;
+    font-family: 'NanumSquareAcb';
+    line-height: 35px;
+    margin-top: 10px;
+}
+.title-line {
+    margin: 0 20px;
+    height: 100%;
+    border-radius: 15px;
+    width: 5px;
+    border: 0;
+    background-color: #5786FF;
+}

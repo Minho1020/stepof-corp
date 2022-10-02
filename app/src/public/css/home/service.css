@@ -1,0 +1,133 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+#service-landing {
+    display: flex;
+    margin-top: 77px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #5786FF;
+    height: 60vh;
+}
+#service {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#service-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#service-title-main {
+    font-family: 'NanumSquareAceb';
+    font-size: 40px;
+    color: white;
+    margin: 20px 0;
+}
+#service-title-sub {
+    margin: 10px 0;
+    width: 60%;
+    text-align: center;
+    font-family: 'NanumSquareAcr';
+    font-size: 22px;
+    color: white;
+    line-height: 32px;  
+    letter-spacing: -0.2px;
+}
+#service-wrapper {
+    width: 70%;
+    min-width: 1200px;
+    margin-top: 50px;
+}
+#service-list {
+    display: flex;
+    flex-direction: column;
+}
+.service-card-line {
+    border: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(136, 136, 136, 0.3);
+}
+.service-card {
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.service-card-info-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.service-card-title {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+}
+.service-card-title-main {
+    font-family: 'NanumSquareAcb';
+    font-size: 32px;
+}
+.service-card-title-sub {
+    font-family: 'NanumSquareAcb';
+    font-size: 32px;
+}
+.service-card-explanation {
+    color: #333;
+    margin-top: 10px;
+    font-family: 'NanumSquareAcr';
+    font-size: 15px;
+    line-height: 25px;
+}
+.service-card-logo {
+    width: 170px;
+}
+.service-card-logo > img {
+    width: 100%;
+}
+.service-card-info-more {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.service-card-info-more-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+}
+.service-card-info-more-img {
+    border-radius: 15px;
+    border: solid 1px rgba(136, 136, 136, 0.3);
+}
+.service-card-link {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.service-card-link > li {
+    margin-right: 50px;
+}
+.service-card-link > li > a {
+    color: #333;
+    font-size: 35px;
+}
+.service-card-link > li:nth-child(2) > a {
+    font-size: 40px;
+}
+
+/* 링크 아이콘 색깔 설정 */
+.service-card:nth-child(2) .service-card-link > li:hover > a {
+    color: #5786FF;
+}
+.service-card:nth-child(4) .service-card-link > li:hover > a {
+    color: skyblue;
+}
+/* 링크 아이콘 색깔 설정 */

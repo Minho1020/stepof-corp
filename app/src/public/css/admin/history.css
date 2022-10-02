@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 3000px;
+}
+section {
+    width: 70%;
+    min-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main {
+    margin-top: 77px;
+    display: flex;
+    padding: 50px 0;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+}
+#setting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.part-name {
+    font-family: 'NanumSquareAceb';
+    font-size: 20px;
+    margin: 10px 0;
+}
+#add-history {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start ;
+}
+#add-history-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#add-history-box {
+    border: 3px solid #5786FF;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#add-history-box-btn:hover {
+    background-color: rgb(100, 100, 100, 0.1);
+}
+#add-history-box-btn {
+    width: 800px;
+    height: 80px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#add-history-box-btn > i {
+    transition: all .3s;
+}
+#add-history-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+#add-history-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+}
+.open {
+    max-height: 600px;
+}
+.close {
+    max-height: 0;
+}
+input:focus {
+    outline: none;
+}
+textarea:focus {
+    outline: none;
+}
+#input-group {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 30px);
+    justify-content: space-between;
+}
+#input-content {
+    font-family: 'NanumSquareAceb';
+    font-size: 25px;
+    width: calc(100% - 50px);
+    height: 60px;
+    margin: 15px 15px;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+#input-date {
+    font-size: 20px;
+    font-family: 'NanumSquareAceb';
+    border-radius: 5px;
+    padding: 5px;
+    color: #666;
+    border: 1px solid black;
+}
+#input-link {
+    font-size: 20px;
+    font-family: 'NanumSquareAceb';
+    border-radius: 5px;
+    padding: 5px;
+    color: #666;
+    border: 1px solid black;
+    width: 550px;
+}
+
+#add-history-submit {
+    width: calc(800px - 30px);
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+#submit-btn {
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: white;
+    border: 3px solid #5786FF;
+    color: #5786FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#submit-btn:hover {
+    background-color: #5786FF;
+    color: white;
+}
+#submit-btn:hover > i {
+    animation-name: arrowMove;
+    animation-duration: .7s;
+}
+
+@keyframes arrowMove {
+    0% {transform: translateX(0);}
+    25% {transform: translateX(10px);}
+    50% {transform: translateX(0);}
+    75% {transform: translateX(10px);}
+    100% {transform: translateX(0);}
+}
+
+#add-history-submit-des {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.add-history-submit-note {
+    font-size: 13px;
+    margin: 3px 0;
+    color: #444;
+}
+
+#setting {
+    position: sticky;
+    top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#setting-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#setting-box {
+    margin-top: 42px;
+    width: 300px;
+    border-radius: 15px;
+    background-color: #5786FF;
+    overflow: hidden;
+}
+.option-group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+.optionArray-Btn {
+    width: 100%;
+    font-family: 'NanumSquareAceb';
+    color: white;
+    display: flex;
+    cursor: pointer;
+    font-size: 20px;  
+    padding: 7px 0;
+}
+.optionArray-Btn > i {
+    margin: 0 10px;
+}
+.optionArray-Btn:hover {
+    background-color: rgba(0, 0, 0, 0.506);
+}
+.option-line {
+    border: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #444;
+}
+.optionYear-Btn {
+    font-family: 'NanumSquareAceb';
+    color: white;
+    display: flex;
+    cursor: pointer;
+    padding: 7px 0;
+}
+.option-year {
+    font-size: 25px;  
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#all-history {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+.year-group {
+    display: flex;
+    flex-direction: column;
+}
+.history-year {
+    font-family: 'NanumSquareAceb';
+    font-size: 28px;
+    margin: 25px 0;
+}
+.history-card {
+    width: 806px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin: 5px 0;
+    border-radius: 15px;
+}
+.history-card:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.history-icon {
+    font-size: 35px;
+    color: #5786FF;
+}
+.history-icon > i {
+    transform: rotateZ(90deg);
+}
+.history-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+.history-date {
+    font-family: 'NanumSquareAcb';
+    font-size: 18px;
+    color: #777;
+}
+.history-title {
+    font-size: 22px;
+    display: flex;
+    color: #333;
+    font-family: 'NanumSquareAcb';
+    line-height: 35px;
+    margin-top: 10px;
+}
+.history-card-content {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.history-card-setting {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    height: 65px;
+}
+.history-card-setting > div {
+    display: flex;
+    flex-direction: column;
+}
+.history-card-setting > div > div {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.history-card-setting > div > div:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #5786FF;
+}
+
+#popup-background {
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.popup {
+    width: 350px;
+    height: 400px;
+    position: fixed;
+    display: none;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    border-radius: 15px;
+    overflow: hidden;
+    transform: translate(-50% ,-50%);
+    box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 9%);
+}
+.popup-wrapper {
+    width: 350px;
+    height: 400px;
+    background-color: #5786FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#popupLogo {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    width: 300px;
+}
+.popupStandard {
+    font-family: 'NanumSquareAceb';
+    color: white;
+    font-size: 25px;
+}
+.popupPart {
+    font-family: 'NanumSquareAceb';
+    color: black;
+    font-size: 15px;
+}
+.popupInput {
+    width: 300px;
+    padding: 7px 7px;
+    font-family: 'NanumSquareAcb';
+    border: none;
+    font-size: 20px;
+    margin: 5px 0;
+    color: white;
+    background-color: #5786FF;
+}
+#userCheck-btn {
+    margin-top: 20px;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #5786FF;
+    border: 3px solid #5786FF;
+    color: white;
+    display: flex;
+    transition: all .2s;
+    align-items: center;
+    justify-content: center;
+}
+#userCheck-btn:hover {
+    background-color: white;
+    color: #5786FF;
+}
+#quit {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    border: 0;
+    background-color: #5786FF;
+    color: white;
+}
+#popupDes {
+    font-family: 'NanumSquareAcb';
+    color: white;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 13px;
+}
