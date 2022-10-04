@@ -7,11 +7,20 @@ class adminHistory {
         this.body = body;
     }
     
-    async getHistory() {
+    async getHistories() {
         const client = this.body;
         try {
-            const history = await adminHistoryStorage.getHistoryInfo(client);
+            const history = await adminHistoryStorage.getHistoriesInfo(client);
 
+            return history
+        } catch {
+            return { success : false, err};
+        }
+    };
+    async getHistory() {
+        const id = this.body;
+        try {
+            const history = await adminHistoryStorage.getHistoryInfo(id);
             return history
         } catch {
             return { success : false, err};
@@ -27,6 +36,12 @@ class adminHistory {
     async deleteHistory() {
         const id = this.body;
         const response = await adminHistoryStorage.deleteHistoryInfo(id);
+        return response;
+    }
+
+    async updateHistory() {
+        const content = this.body;
+        const response = await adminHistoryStorage.updateHistoryInfo(content);
         return response;
     }
 }

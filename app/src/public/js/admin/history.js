@@ -35,7 +35,7 @@ $(document).ready(function () {
             order : option,
         };
 
-        fetch("history/gethistory", {
+        fetch("history/gethistories", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -47,17 +47,19 @@ $(document).ready(function () {
             for(const i of data) {
                 const card = `
                 <div class="history-card" id="${i.historyId}">
-                    <div class="history-card-content">
-                        <div class="history-icon"><i class="fa-solid fa-shoe-prints"></i></div>
-                        <div class="history-content">
-                            <div class="history-date">${i.historyDate.slice(5,7) + "월" + " " + i.historyDate.slice(8,10) + "일"}</div>
-                            <a href="${i.historyURL}" class="history-title">${i.historyContent}<span class="title-line"></span></a>
+                    <div class="history-card-wrapper">
+                        <div class="history-card-content">
+                            <div class="history-icon"><i class="fa-solid fa-shoe-prints"></i></div>
+                            <div class="history-content">
+                                <div class="history-date">${i.historyDate.slice(5,7) + "월" + " " + i.historyDate.slice(8,10) + "일"}</div>
+                                <a href="${i.historyURL}" class="history-title">${i.historyContent}<span class="title-line"></span></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="history-card-setting">
-                        <div class="history-card-setting-right">
-                            <div class="history-card-edit edit-btn"><i class="fa-solid fa-pen-to-square"></i></div>
-                            <div class="history-card-delete delete-btn"><i class="fa-solid fa-trash-can"></i></div>
+                        <div class="history-card-setting">
+                            <div class="history-card-setting-right">
+                                <div class="history-card-edit edit-btn"><i class="fa-solid fa-pen-to-square"></i></div>
+                                <div class="history-card-delete delete-btn"><i class="fa-solid fa-trash-can"></i></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -71,16 +73,27 @@ $(document).ready(function () {
             }
             $(".delete-btn").click(function () {
                 const info = {
-                    id : $(this).parent().parent().parent().attr('id'),
+                    id : $(this).parent().parent().parent().parent().attr('id'),
                     type : "delete",
                 }
                 popup(info);
             });
+            $(".edit-btn").click(function() {
+                const info = {
+                    id : $(this).parent().parent().parent().parent().attr('id'),
+                    type : "edit",
+                }
+                popup(info);
+            })
         })
 
     };
 
     function addHistory() {
+        if(!content.value) return alert("스토리를 입력해주세요");
+        if(!date.value) return alert("날짜를 기입해주세요");
+        if(!url.value) return alert("URL를 입력해주세요");
+
         const req = {
             content : content.value,
             date : date.value,
@@ -125,7 +138,7 @@ $(document).ready(function () {
             if(type === "delete") {
                 deleteHistory(id);
             } else if(type === "edit") {
-                editHistory(id);
+                editOpen(id)
             };
         } else if(!response.success) {
             popdown()
@@ -139,6 +152,7 @@ $(document).ready(function () {
         $(".popup").fadeIn("fast");
         $(".popup").attr("data-id" , info.id );
         $(".popup").attr('data-type', info.type);
+        $("#popupId").focus()
     };
 
     function popdown() {
@@ -202,7 +216,96 @@ $(document).ready(function () {
 
     };
 
-    function editHistory(id) {
-        console.log("편집하시겠습니까?")
+    
+
+    function editOpen(id) {
+        $(".popup").attr('data-id','');
+        popdown()
+
+        const req = {
+            id : id,
+        }
+        fetch("history/gethistory", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(req),
+        }).then((res) => res.json())
+        .then((data) => {
+            const editBox = `
+            <div id="edit-history-input">
+                <div id="edit-history-input-wrapper">
+                    <textarea id="edit-content" placeholder="문구를 입력해주세요" >${data[0].historyContent}</textarea>
+                    <div id="edit-group">                            
+                        <input type="date" name="edit-date" id="edit-date" value="${data[0].historyDate}">
+                        <input type="url" name="edit-link" id="edit-link" placeholder="URL을 입력해주세요" value="${data[0].historyURL}">
+                    </div>
+                    <div id="edit-history-submit">
+                        <button id="edit-cancel">취소</button>
+                        <button id="edit-submit">계속</button>
+                    </div> 
+                </div>                    
+            </div>
+            `;
+            $(`#${data[0].historyId}`).append(editBox);
+            $(`#${data[0].historyId}`).css("border","solid 3px #5786FF")
+            $("#edit-history-input").slideDown('fast');
+
+            $("#edit-cancel").click(editCancel)
+            $("#edit-submit").click(function() {
+                const editContent = document.querySelector("#edit-content"),
+                    editDate = document.querySelector("#edit-date"),
+                    editURL = document.querySelector("#edit-link");
+
+                const info = {
+                    content : editContent.value,
+                    date : editDate.value,
+                    url : editURL.value,
+                }
+                editHistory(info);
+            })
+
+
+        })
+    }
+    function editCancel() {
+        const response = confirm("스토리 수정을 취소하시겠습니까?")
+        if(response) {
+            $("#edit-history-input").slideUp('fast');
+            $(`#edit-history-input`).parent().css("border","solid 3px white", function() {
+                $("#edit-history-input").remove()
+            });
+        } else {
+            return
+        }
+    }
+
+
+    function editHistory(info) {
+        const response = confirm("내용이 올바른지 확인하신 후 스토리를 수정하시겠습니까?");
+        if(response) {
+            const req = {
+                content : info.content,
+                date : info.date,
+                url : info.url,
+                id : $("#edit-history-input").parent().attr('id'),
+            }
+            console.log(req)
+            fetch("history/updatehistory", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(req),
+            }).then((res) => res.json())
+            .then((res) => {
+                if(res.success) {
+                    alert("스토리가 수정되었습니다")
+                    location.href=location.href;
+                }
+            })
+        }
+
     }
 })

@@ -15,9 +15,12 @@ router.get("/history", admin_get.output.history)
 router.post("/login", admin_ctrl.process.login)
 router.post("/user/secure", admin_ctrl.process.check)
 router.post("/newsAdd/submit", admin_ctrl.process.newsAddSubmit)
+router.post("/history/gethistories", admin_ctrl.process.getHistories)
 router.post("/history/gethistory", admin_ctrl.process.getHistory)
 router.post("/history/addhistory", admin_ctrl.process.addHistory)
 router.post("/history/deletehistory", admin_ctrl.process.deleteHistory)
+router.post("/history/updatehistory", admin_ctrl.process.updateHistory)
+
 
 
 

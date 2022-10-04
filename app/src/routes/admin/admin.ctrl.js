@@ -21,9 +21,15 @@ const process = {
     newsAddSubmit: (req, res) => {
         console.log(req);
     },
+    getHistories: async (req, res) => {
+        const option = new adminHistory(req.body);
+        const history = await option.getHistories();
+        return res.json(history)
+    },
     getHistory: async (req, res) => {
         const option = new adminHistory(req.body);
         const history = await option.getHistory();
+        console.log(history)
         return res.json(history)
     },
     addHistory: async (req, res) => {
@@ -34,6 +40,11 @@ const process = {
     deleteHistory: async (req, res) => {
         const info = new adminHistory(req.body);
         const response = await info.deleteHistory();
+        return res.json(response);
+    },
+    updateHistory: async (req, res) => {
+        const info = new adminHistory(req.body);
+        const response = await info.updateHistory();
         return res.json(response);
     }
 }

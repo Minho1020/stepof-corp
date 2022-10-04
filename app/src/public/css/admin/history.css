@@ -251,15 +251,22 @@ textarea:focus {
     margin: 25px 0;
 }
 .history-card {
-    width: 806px;
+    width: 800px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
+    flex-direction: column;
+    border: 3px white solid;
     margin: 5px 0;
     border-radius: 15px;
 }
-.history-card:hover {
+.history-card-wrapper {
+    display: flex;
+    align-items: center;
+    width: 800px;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-radius: 15px;
+}
+.history-card-wrapper:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 .history-icon {
@@ -416,4 +423,77 @@ textarea:focus {
     bottom: 15px;
     left: 15px;
     font-size: 13px;
+}
+#edit-history-input {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    overflow: hidden;
+}
+#edit-history-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    transition: all .3s ease-in-out;
+}
+input:focus {
+    outline: none;
+}
+textarea:focus {
+    outline: none;
+}
+#edit-group {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 30px);
+    justify-content: space-between;
+}
+#edit-content {
+    font-family: 'NanumSquareAcb';
+    font-size: 22px;
+    width: calc(100% - 50px);
+    height: 50px;
+    margin: 15px 15px;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+#edit-date {
+    font-size: 18px;
+    font-family: 'NanumSquareAcb';
+    border-radius: 5px;
+    padding: 5px;
+    color: #666;
+    border: 1px solid black;
+}
+#edit-link {
+    font-size: 18px;
+    font-family: 'NanumSquareAcb';
+    border-radius: 5px;
+    padding: 5px;
+    color: #666;
+    border: 1px solid black;
+    width: 570px;
+}
+#edit-history-submit {
+    display: flex;
+    justify-content: right;
+    width: calc(100% - 30px);
+}
+#edit-history-submit > button {
+    border: none;
+    font-family: 'NanumSquareAceb';
+    font-size: 15px;
+    background-color: #5787ffca;
+    color:#777;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+#edit-history-submit > button:hover {
+    background-color: #5786FF;
+    color: black;
 }

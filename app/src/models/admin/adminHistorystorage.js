@@ -4,7 +4,7 @@ const { query } = require("../../config/db");
 const db = require("../../config/db");
 
 class historyStorage {
-    static async getHistoryInfo(option) {
+    static async getHistoriesInfo(option) {
         return new Promise((resolve, reject) => {
             if(option.order === "recent") {
                 db.query("SELECT * FROM historySTEPOF ORDER BY historyId DESC;", (err, data) => {
@@ -17,6 +17,15 @@ class historyStorage {
                     else resolve(data)
                 })
             }
+        });
+    }
+
+    static async getHistoryInfo(id) {
+        return new Promise((resolve, reject) => {
+                db.query("SELECT * FROM historySTEPOF WHERE historyId = ?;",[id.id], (err, data) => {
+                    if(err) reject(err)
+                    else resolve(data)
+                })
         });
     }
 
@@ -36,6 +45,16 @@ class historyStorage {
             db.query(query, [id.id], (err) => {
                 if(err) reject(err);
                 else resolve({success : true});
+            })
+        })
+    }
+
+    static async updateHistoryInfo(content) {
+        return new Promise((resolve, reject) => {
+            const query = 'UPDATE historySTEPOF SET historyContent = ?, historyDate = ?, historyURL = ? WHERE historyId = ?;'
+            db.query(query, [content.content, content.date, content.url, content.id], (err) => {
+                if(err) reject(err);
+                else resolve({ success:true});
             })
         })
     }
