@@ -1,10 +1,9 @@
 #story-landing {
     display: flex;
-    margin-top: 77px;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #5786FF;
+    background-color: #4543f8;
     height: 60vh;
 }
 #story-landing > span {
@@ -45,47 +44,45 @@
     width: 70%;
     min-width: 1200px;
     flex-direction: column;
-    align-items: center;
+}
+.story-year-group {
+    display: flex;
+    margin-bottom: 50px;
+}
+.story-year-wrapper {
+    width: 40%;
+    display: flex;
+    align-items: flex-start;
+}
+.story-history-wrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
 }
 .story-year {
-    font-size: 35px;
+    font-size: 50px;
     padding-bottom: 10px;
     width: 100%;
-    margin: 30px 0;
+    color: #333;
     font-family: 'NanumSquareAceb';
-    border-bottom: solid 1px rgba(136, 136, 136, 0.3);
-    color: #222;
 }
 .story-card {
     display: flex;
-    width: calc(50%);
+    width: 100%;
     height: 90px;
     justify-content: space-between;
     margin: 10px 0;
 }
-.type-one {
-    align-self: flex-end;
-}
-.type-two {
-    align-self: flex-start;
-}
 .story-icon {
-    color: #5786FF;
+    color: #4543f8;
     font-size: 35px;
 }
-.type-one .story-icon > i {
-    transform: rotateZ(105deg);
+.story-card .story-icon > i {
+    transform: rotateZ(-90deg);
 }
-.type-two .story-icon > i {
-    transform: rotateZ(75deg);
-}
-.type-one .story-content {
+.story-card .story-content {
     margin-left: 50px;
     align-items: flex-start;
-}
-.type-two .story-content {
-    margin-right: 50px;
-    align-items: flex-end;
 }
 .story-content {
     display: flex;
@@ -111,5 +108,5 @@
     border-radius: 15px;
     width: 5px;
     border: 0;
-    background-color: #5786FF;
+    background-color: #4543f8;
 }

@@ -16,7 +16,17 @@ $(document).ready(function () {
 
     });
     $(".on").click(closeAdd());
-
+    $(".optionArray-Btn").click(function() {
+        $(".selected").removeClass("selected")
+        $(this).toggleClass("selected")
+        getHistory()
+    });
+    $(".optionYear-Btn").click(function() {
+        const id = $(this).attr('id').slice(2,);
+        const location = document.getElementById(id).offsetTop - 100;
+        window.scrollTo({top:location, behavior:"smooth"})
+    })
+    
     function openAdd() {
         $("#add-history-box-btn > i").css("transform","rotateZ(135deg)");
         $(".close").attr("class","open");
@@ -30,11 +40,9 @@ $(document).ready(function () {
     
     function getHistory() {
         const option = document.querySelector(".selected").id.toString();
-
         const req = {
             order : option,
         };
-
         fetch("history/gethistories", {
             method: "POST",
             headers: {
@@ -44,6 +52,8 @@ $(document).ready(function () {
         })
         .then((res) => res.json())
         .then((data) => {
+            $("#2022year-group").html("");
+            $("#2021year-group").html("");
             for(const i of data) {
                 const card = `
                 <div class="history-card" id="${i.historyId}">
@@ -64,11 +74,10 @@ $(document).ready(function () {
                     </div>
                 </div>
                 `;
-
                 if(i.historyDate.slice(0,4) === "2022") {
-                    $("#2022year").append(card);
+                    $("#2022year-group").append(card);
                 } else if(i.historyDate.slice(0,4) === "2021") {
-                    $("#2021year").append(card);
+                    $("#2021year-group").append(card);
                 }
             }
             $(".delete-btn").click(function () {
@@ -99,8 +108,6 @@ $(document).ready(function () {
             date : date.value,
             url :  url.value,
         };
-
-        console.log(req);
 
         fetch("history/addhistory", {
             method: "POST",
@@ -291,7 +298,6 @@ $(document).ready(function () {
                 url : info.url,
                 id : $("#edit-history-input").parent().attr('id'),
             }
-            console.log(req)
             fetch("history/updatehistory", {
                 method: "POST",
                 headers: {

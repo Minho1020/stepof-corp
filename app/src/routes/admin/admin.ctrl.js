@@ -29,7 +29,6 @@ const process = {
     getHistory: async (req, res) => {
         const option = new adminHistory(req.body);
         const history = await option.getHistory();
-        console.log(history)
         return res.json(history)
     },
     addHistory: async (req, res) => {

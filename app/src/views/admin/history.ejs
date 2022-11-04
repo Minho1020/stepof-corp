@@ -73,11 +73,15 @@
                 </div>
             </div>
             <div id="all-history">
-                <div id="2022year" class="year-group">
+                <div id="2022" class="year-group">
                     <div class="history-year">2022년</div>
+                    <div id="2022year-group" class="history-group">
+                    </div>
                 </div>
-                <div id="2021year" class="year-group">
+                <div id="2021" class="year-group">
                     <div class="history-year">2021년</div>
+                    <div id="2021year-group" class="history-group">
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,14 +89,21 @@
         <div id="setting">
             <div id="setting-wrapper">
                 <div id="setting-box">
-                    <div class="option-group">
-                        <div class="optionArray-Btn selected" id="recent"><i class="fa-solid fa-arrow-up-wide-short"></i>최근 순</div>
-                        <div class="optionArray-Btn" id="older"><i class="fa-solid fa-arrow-up-short-wide"></i>오래된 순</div>
+                    <div class="setting-group">
+                        <span class="option-title">정렬 순서</span>
+                        <hr class="option-line">
+                        <div class="option-group">
+                            <div class="optionArray-Btn selected" id="recent"><i class="fa-solid fa-arrow-up-wide-short"></i>최근 순<i class="checkIcon fa-solid fa-check"></i></div>
+                            <div class="optionArray-Btn" id="older"><i class="fa-solid fa-arrow-up-short-wide"></i>오래된 순<i class="checkIcon fa-solid fa-check"></i></div>
+                        </div>
                     </div>
-                    <hr class="option-line">
-                    <div class="option-group">
-                        <div class="optionYear-Btn"><span class="option-year">2022</span></div>
-                        <div class="optionYear-Btn"><span class="option-year">2021</span></div>
+                    <div class="setting-group">
+                        <span class="option-title">연도</span>
+                        <hr class="option-line">
+                        <div class="option-group">
+                            <div class="optionYear-Btn" id="To2022"><span class="option-year">2022</span><i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="optionYear-Btn" id="To2021"><span class="option-year">2021</span><i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
                     </div>
                 </div>
             </div>

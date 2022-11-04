@@ -1,11 +1,10 @@
 @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
 #service-landing {
     display: flex;
-    margin-top: 77px;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #5786FF;
+    background-color: #4543f8;
     height: 60vh;
 }
 #service {

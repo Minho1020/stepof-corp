@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/addce8cc1e.js" crossorigin="anonymous"></script> 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
@@ -18,74 +19,53 @@
 </head>
 <body>
     <header>
-        <nav id="main-header">
-            <!-- <a href="/HTML/main.html" id="main-logo">STEP OF</a> -->
-        </nav>
-        <nav id="nav-header">   
+        <nav id="main-header">   
+            <div id="logo">
+                <a href="/HTML/main.html" id="main-logo">STEPOF</a>
+            </div>
             <div id="menu-list">
-                <li><a href="/">회사소개</a></li>
-                <li><a href="/service">서비스</a></li>
-                <li><a href="/history">스토리</a></li>
-                <li><a href="/news">소식</a></li>
-                <li><a href="/recruit">채용</a></li>
+                <li>
+                    <a href="/business">
+                        <span class="menu-background"></span>
+                        <span class="menu-text">회사소개</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/service">
+                        <span class="menu-background"></span>
+                        <span class="menu-text">서비스</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/history">
+                        <span class="menu-background"></span>
+                        <span class="menu-text">스토리</span>
+                    </a>
+                </li>
+                <li>                    
+                    <a href="/news">
+                        <span class="menu-background"></span>
+                        <span class="menu-text">소식</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/recruit">
+                        <span class="menu-background"></span>
+                        <span class="menu-text">인재채용</span>
+                    </a>
+                </li>
+            </div>
+            <div id="lang-header">
+                <div id="lang-box">
+                    <a href="" style="color: #4543f8;" id="KOR">KOR</a>
+                    <span id="lang-line"></span>
+                    <a href="" id="ENG">ENG</a>
+                </div>
             </div>
         </nav>
     </header>
     <section id="main-news">
         <div id="news-main-content" class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide news-main-slide">
-                    <img src="https://www.navercorp.com/img/ko/main/img_main_slide9.jpg" alt="">
-                    <a href="" class="news-main-slide-link"><div class="news-main-slide-description">
-                        <div class="news-main-slide-description-main">
-                            <strong class="news-main-slide-description-main-title">STEP OF 스타트업, 세상에 한발짝 내딛다</strong>
-                            <span class="news-main-slide-description-type">회사소개</span>
-                        </div>
-                        <span class="news-main-slide-description-line"></span>
-                        <div class="news-main-slide-description-sub">
-                            <span class="news-main-slide-description-sub-title">누구보다 먼저 한발짝 내딛어 세상을 변화시키겠습니다</span>
-                        </div>
-                        <div class="news-main-slide-description-more">
-                            <span class="news-main-slide-description-more-text">READ MORE</span>
-                        </div>
-                    </div></a>
-                </div>
-                <div class="swiper-slide news-main-slide">
-                    <img src="https://www.navercorp.com/img/ko/main/img_main_slide10.jpg" alt="">
-                    <a href="" class="news-main-slide-link"><div class="news-main-slide-description">
-                        <div class="news-main-slide-description-main">
-                            <strong class="news-main-slide-description-main-title">STEP OF 스타트업, 세상에 한발짝 내딛다</strong>
-                            <span class="news-main-slide-description-type">회사소개</span>
-                        </div>
-                        <span class="news-main-slide-description-line"></span>
-                        <div class="news-main-slide-description-sub">
-                            <span class="news-main-slide-description-sub-title">누구보다 먼저 한발짝 내딛어 세상을 변화시키겠습니다</span>
-                        </div>
-                        <div class="news-main-slide-description-more">
-                            <span class="news-main-slide-description-more-text">READ MORE</span>
-                        </div>
-                    </div></a>
-                </div>
-                <div class="swiper-slide news-main-slide">
-                    <img src="https://www.navercorp.com/img/ko/main/img_main_slide5.jpg" alt="">
-                    <a href="" class="news-main-slide-link"><div class="news-main-slide-description">
-                        <div class="news-main-slide-description-main">
-                            <strong class="news-main-slide-description-main-title">STEP OF 스타트업, 세상에 한발짝 내딛다</strong>
-                            <span class="news-main-slide-description-type">회사소개</span>
-                        </div>
-                        <span class="news-main-slide-description-line"></span>
-                        <div class="news-main-slide-description-sub">
-                            <span class="news-main-slide-description-sub-title">누구보다 먼저 한발짝 내딛어 세상을 변화시키겠습니다</span>
-                        </div>
-                        <div class="news-main-slide-description-more">
-                            <span class="news-main-slide-description-more-text">READ MORE</span>
-                        </div>
-                    </div></a>
-                </div>
-            </div>
-
-            <div class="swiper-button-prev news-main-slide-button-prev"></div>
-            <div class="swiper-button-next news-main-slide-button-next"></div>
 
         </div>
         <div id="news-sub-content">
@@ -129,6 +109,24 @@
                         <span class="news-sub-content-card-info-type">소식</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section id="main-service">
+        <div class="service-section" id="schooler">
+            <div class="service-info">
+                <div class="service-title-group">
+                    <div class="service-title">스쿨러</div>
+                    <div class="service-title">SCHOOLER</div>
+                    <div class="service-subtitle">학생 커뮤니티 플랫폼</div>
+                </div>
+                <div class="service-logo-group">
+                    <div class="service-logo"><img src="https://is2-ssl.mzstatic.com/image/thumb/Purple126/v4/c0/cc/85/c0cc855b-f67d-8e4e-1e32-cea1afbd8672/AppIcon-1x_U007emarketing-0-7-0-85-220.png/230x0w.webp" alt=""></div>
+                    <a class="service-more" href="https://schooler.com">더 알아보기 <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>          
+            <div class="service-notice">
+        
             </div>
         </div>
     </section>

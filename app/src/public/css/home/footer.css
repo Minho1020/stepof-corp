@@ -6,6 +6,7 @@ footer {
     border-top: #999 solid 1px;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 #footer-wrapper {
     width: 80%;

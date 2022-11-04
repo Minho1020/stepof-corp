@@ -24,16 +24,48 @@
         AOS.init();
     </script>
     <header>
-        <nav id="main-header">
-            <!-- <a href="/HTML/main.html" id="main-logo">STEP OF</a> -->
-        </nav>
-        <nav id="nav-header">
+        <nav id="main-header">   
+            <div id="logo">
+                <a href="/HTML/main.html" id="main-logo">STEP OF</a>
+            </div>
             <div id="menu-list">
-                <li><a href="/">회사소개</a></li>
-                <li><a href="/service">서비스</a></li>
-                <li><a href="/history">스토리</a></li>
-                <li><a href="/news">소식</a></li>
-                <li><a href="/recruit">채용</a></li>
+                <li>
+                    <a href="/business">
+                        <span class="menu-background"></span>
+                        <span class="menu-text">회사소개</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/service">
+                        <span class="menu-background"></span>
+                        <span class="menu-text">서비스</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="selected" href="/history">
+                        <span class="menu-background"></span>
+                        <span class="menu-text">스토리</span>
+                    </a>
+                </li>
+                <li>                    
+                    <a href="/news">
+                        <span class="menu-background"></span>
+                        <span class="menu-text">소식</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/recruit">
+                        <span class="menu-background"></span>
+                        <span class="menu-text">인재채용</span>
+                    </a>
+                </li>
+            </div>
+            <div id="lang-header">
+                <div id="lang-box">
+                    <a href="" style="color: #4543f8;" id="KOR">KOR</a>
+                    <span id="lang-line"></span>
+                    <a href="" id="ENG">ENG</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -45,52 +77,22 @@
     </section>
     <section id="story">
         <div id="story-wrapper">
-            <span class="story-year">2022년</span>
-            <div class="story-card type-two">
-                <div class="story-content" data-aos="fade-right" data-aos-duration="800">
-                    <div class="story-date">9월 9일</div>
-                    <a href="" class="story-title"><span class="title-line"></span>학교 커뮤니티 플랫폼 스쿨러 기획 완료 및 개발 착수</a>
+            <div class="story-year-group" id="story-2022">
+                <div class="story-year-wrapper">
+                    <span class="story-year">2022년</span>
                 </div>
-                <div class="story-icon" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500"><i class="fa-solid fa-shoe-prints"></i></div>
-            </div>
-            <div class="story-card type-one">
-                <div class="story-icon" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500"><i class="fa-solid fa-shoe-prints"></i></div>
-                <div class="story-content"data-aos="fade-left" data-aos-duration="800">
-                    <div class="story-date">5월 25일</div>
-                    <a href="" class="story-title">학교 커뮤니티 플랫폼 스쿨러 기획<span class="title-line"></span></a>
+                <div class="story-history-wrapper">
+                    <%- history2022 %>
                 </div>
             </div>
-            <div class="story-card type-two">
-                <div class="story-content" data-aos="fade-right" data-aos-duration="800">
-                    <div class="story-date">4월 28일</div>
-                    <a href="" class="story-title"><span class="title-line"></span>스텝오브_STEP OF 코퍼레이션 사이트 제작 착수</a>
+            <div class="story-year-group" id="story-2021">
+                <div class="story-year-wrapper">
+                    <span class="story-year">2021년</span>
                 </div>
-                <div class="story-icon" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500"><i class="fa-solid fa-shoe-prints"></i></div>
-            </div>
-            <div class="story-card type-one">
-                <div class="story-icon" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500"><i class="fa-solid fa-shoe-prints"></i></div>
-                <div class="story-content" data-aos="fade-left" data-aos-duration="800">
-                    <div class="story-date">3월 11일</div>
-                    <a href="" class="story-title">플랫업_PLATUP -> 스텝오브_STEP OF 리브랜딩<span class="title-line"></span></a>
+                <div class="story-history-wrapper">
+                    <%- history2021 %>
                 </div>
             </div>
-            <span class="story-year">2021년</span>
-            <div class="story-card type-two">
-                <div class="story-content" data-aos="fade-right" data-aos-duration="800">
-                    <div class="story-date">11월 15일</div>
-                    <a href="" class="story-title"><span class="title-line"></span>ESPORT G 이스포츠 대회 플랫폼 기획</a>
-                </div>
-                <div class="story-icon" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500"><i class="fa-solid fa-shoe-prints"></i></div>
-            </div>
-            <div class="story-card type-one">
-                <div class="story-icon" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500"><i class="fa-solid fa-shoe-prints"></i></div>
-                <div class="story-content" data-aos="fade-left" data-aos-duration="800">
-                    <div class="story-date">10월 20일</div>
-                    <a href="" class="story-title">IT기반 플랫폼 소셜밸류(Social Value)회사 플랫업_PLATUP 설립<span class="title-line"></span></a>
-                </div>
-            </div>
-
-
         </div>
     </section>
 

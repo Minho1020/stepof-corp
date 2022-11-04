@@ -1,7 +1,10 @@
 @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
-
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #main-news {
-    margin-top: 77px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -9,10 +12,12 @@
 #news-main-content {
     display: flex;
     width: 100%;
-    height: 60vh;
+    height: 75vh;
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
+
 }
 .news-main-slide {
     display: flex;
@@ -39,16 +44,18 @@
     background-color: rgba(0, 0, 0, 0.3);
 }
 .news-main-slide-description-main {
-    width: 80%;
+    width: 65%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all .3s;
 }
 .news-main-slide-description-main-title {
-    font-size: 37px;
-    color: white;
+    font-size: 60px;
+    color: #4a53b5;
     position: relative;
+    font-family: 'NotoSansKR';
+    font-weight: 900;
     opacity: 0;
     top: -100%;
 }
@@ -67,13 +74,13 @@
     margin: 15px 0;
 }
 .news-main-slide-description-sub {
-    width: 80%;
+    width: 65%;
     display: flex;
     transition: all .3s;
 }
 .news-main-slide-description-sub-title {
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     bottom: -100%;
     opacity: 0;
     position: relative;
@@ -93,7 +100,7 @@
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #4178ff;
+    background-color: #4a53b5;
 }
 .swiper-slide-active .news-main-slide-description-main .news-main-slide-description-main-title {
     top: 0;
@@ -111,7 +118,7 @@
     bottom: 0;
 }
 .swiper-slide-active .news-main-slide-description-line {
-    width: 80%;
+    width: 65%;
 }
 .news-main-slide-link:hover .news-main-slide-description-main {
     transform: translateY(-35px);
@@ -131,6 +138,7 @@
     color: white;
     padding: 5px 20px;
     transition: all .3s;
+    left: 150px;
 }
 .news-main-slide-button-prev:hover {
     transform: translateX(-10px);
@@ -139,6 +147,7 @@
     color: white;
     padding: 5px 20px;
     transition: all .3s;
+    right: 150px;
 }
 .news-main-slide-button-next:hover {
     transform: translateX(10px);
@@ -160,8 +169,8 @@
 }
 .news-sub-content-card {
     width: 370px;
-    height: 450px;
-    margin: 30px 0;
+    height: 420px;
+    margin: 15px 0;
     display: flex;
     flex-direction: column;
 }
@@ -208,4 +217,98 @@
 .news-sub-content-card-info > span {
     font-size: 12px;
     font-family: 'NanumSquareAcr';
+}
+
+
+#main-service {
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.service-section {
+    width: 100%;
+    height: 360px;
+    display: flex;
+    background-color: white;
+    align-items: center;
+}
+.service-info {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 10px 10px 15px 6px #f15b24da;
+    border-radius: 15px;
+    transition: all .3s ease;
+}
+.service-info:hover {
+    box-shadow: 10px 10px 20px 6px #f15b24;
+    transform: translateY(-5px);
+}
+.service-title-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.service-title {
+    font-family: 'NanumSquareAceb';
+    font-size: 30px;
+}
+.service-subtitle {
+    font-family: 'NanumSquareAcb';
+    font-size: 30px;
+}
+#schooler .service-title {
+    color: #f15a24;
+}
+.service-logo-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    width: 80%;
+}
+.service-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    height: 160px;
+    width: 160px;
+    box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 15%);
+    overflow: hidden;
+}
+.service-logo > img {
+    height: 100%;
+}
+.service-notice {
+    width: calc(100% - 40% - 100px);
+}
+.service-more {
+    font-family: 'NanumSquareAcb';
+    color: #444;
+    font-size: 15px;
+}
+.service-more:hover {
+    color: #f15b24;
+    text-decoration: underline;
+}
+.service-more:hover > i {
+    animation-name: optionArrow;
+    animation-duration: .8s;
+}
+@keyframes optionArrow {
+    0% {transform: translateX(0);}
+    25% {transform: translateX(5px);}
+    50% {transform: translateX(0);}
+    75% {transform: translateX(5px);}
+    100% {transform: translateX(0px);}
 }

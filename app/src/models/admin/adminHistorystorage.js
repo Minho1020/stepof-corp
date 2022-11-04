@@ -6,7 +6,7 @@ const db = require("../../config/db");
 class historyStorage {
     static async getHistoriesInfo(option) {
         return new Promise((resolve, reject) => {
-            if(option.order === "recent") {
+            if(option.order === "recent"|| option.order === undefined) {
                 db.query("SELECT * FROM historySTEPOF ORDER BY historyId DESC;", (err, data) => {
                     if(err) reject(err)
                     else resolve(data)
