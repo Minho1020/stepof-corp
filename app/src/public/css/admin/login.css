@@ -9,7 +9,7 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: #5786FF;
+    background-color: #4543f8;
 }
 a {
     text-decoration: none;
@@ -31,7 +31,7 @@ a {
 }
 .input_wrap > input {
     border: 0;
-    background-color: #5786FF;
+    background-color: #4543f8;
     font-family: 'NanumSquareAcb';
     font-size: 40px;
     margin: 20px 0;
@@ -56,7 +56,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #5786FF;
+    background-color: #4543f8;
     border: 0;
     cursor: pointer;
     transition: all .35s;
@@ -64,5 +64,5 @@ a {
 }
 #btn:hover {
     background-color: ghostwhite;
-    color: #5786FF;
+    color: #4543f8;
 }

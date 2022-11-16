@@ -1,49 +1,38 @@
-#main {
-    margin-top: 63px;
-    width: 100%;
-    background: url("https://www.navercorp.com/img/ko/main/img_main_slide11.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: contain;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 #landing {
-    width: 100%;
-    height: 60vh;
+    margin-top: 63px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(2, 2, 2, 0.3);
+    width: 100%;
+    background-color: #4543f8;
+    height: 60vh;
+    background-attachment: fixed;
 }
-#landing-wrapper {
-    width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
+#landing > span {
+    font-family: 'NanumSquareAceb';
+    font-size: 50px;
+    color: white;
 }
-#landing-text {
+#landing-title {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
-#title {
-    font-family: 'Noto Sans KR', sans-serif;
-    line-height: 1.1;
-    font-weight: 900;
-    /* font-family: 'NanumSquareAceb'; */
-    font-size: 60px;
-    color: white;
-    margin-bottom: 20px;
-    white-space: nowrap;
-}
-#subtitle {
+#landing-title-main {
     font-family: 'NanumSquareAceb';
-    font-size: 35px;
+    font-size: 40px;
     color: white;
+    margin: 20px 0;
+}
+#landing-title-sub {
+    margin: 10px 0;
+    width: 60%;
+    text-align: center;
+    font-family: 'NanumSquareAcr';
+    font-size: 22px;
+    color: white;
+    line-height: 32px;
+    letter-spacing: -0.2px;
 }
 
 .text-subtitle {
@@ -339,10 +328,12 @@
     justify-content: center;
 }
 #way-part {
-    width: 1100px;
+    width: 1200px;
     display: flex;
     flex-direction: column;
     margin: 50px 0;
+    justify-content: center;
+    align-items: center;
 }
 #way-wrapper {
     margin: 50px 0;
@@ -352,23 +343,23 @@
     width: 100%;
 }
 .way-card {
-    width: 1000px;
-    height: 550px;
+    width: 100%;
+    height: 370px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
+    border-radius: 25px;
+}
+.way-card-textBox {
+    width: calc(100% - 420px);
+    height: 100%;
+    display: flex;
+    align-items: center;
     border-radius: 25px;
     background-color: #fff;
     box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 9%);
-    overflow: hidden;
-}
-.way-card-textBox {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 .way-card-textBox-wrapper {
     display: flex;
@@ -376,6 +367,7 @@
     justify-content: space-between;
     width: 80%;
     height: 70%;
+    margin-left: 50px;
 }
 .way-card-title {
     display: flex;
@@ -406,16 +398,9 @@
     flex-direction: row;
 }
 
-.way-card:nth-child(1) .way-card-title-main > span {
-    color: #FD841F;
+.way-card-title-main > span {
+    color: #4543f8;
 }
-.way-card:nth-child(2) .way-card-title-main > span {
-    color: #7978FF;
-}
-.way-card:nth-child(3) .way-card-title-main > span {
-    color: #A8E890;
-}
-
 .way-card-content {
     display: flex;
 }
@@ -434,36 +419,19 @@
     margin-right: 10px;
     font-family: 'NanumSquareAcr';
     font-size: 17px;
-}
-
-.way-card:nth-child(1) .hashtag {
-    color: #FD841F;
-}
-.way-card:nth-child(2) .hashtag {
-    color: #7978FF;
-}
-.way-card:nth-child(3) .hashtag {
-    color: #A8E890;
+    color: #4543f8;
 }
 
 .way-card-mediaBox {
-    width: 50%;
-    height: 100%;
+    width: 320px;
+    height: 320px;
     background-color: #FD841F;
-    border-radius: 15px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 20%);
-}
-.way-card:nth-child(1) .way-card-mediaBox {
-    background-color: #FD841F;
-}
-.way-card:nth-child(2) .way-card-mediaBox {
-    background-color: #7978FF;
-}
-.way-card:nth-child(3) .way-card-mediaBox {
-    background-color: #A8E890;
+    background-color: #4543f8;
 }
 .way-card-mediaBox > img {
     width: 65%;
@@ -474,46 +442,96 @@
 #coreValues {
     display: flex;
     justify-content: center;
+    margin-bottom: 200px;
 }
 #coreValues-part {
-    width: 1100px;
+    width: 1200px;
     display: flex;
     flex-direction: column;
 }
 #coreValues-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
+    height: 1200px;
     margin-top: 80px;
 }
-#coreValues-preview {
+.coreValues-group {
     display: flex;
-    align-items: center;
+    width: 100%;
+    height: 49%;
+    justify-content: space-between;
 }
-.coreValues-preview-box {
+.coreValues-box {
     border-radius: 15px;
-    width: 250px;
-    height: 100px;
+    width: 49%;
+    height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: all .4s;
     box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 9%);
-    margin: 0 20px;
 }
-.coreValues-preview-textBox {
+.coreValues-box-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.coreValues-box:hover {
+    cursor: pointer;
+    transform: rotateX(180deg);
+    transition: all .4s;
+}
+.coreValues-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.coreValues-img > img {
+    height: 100%;
+}
+.coreValues-textBox {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background-color: rgb(0 0 0 / 40%);
+    width: 100%;
+    height: 100%;
+    z-index: 5;
 }
-.coreValues-preview-mainText {
+.coreValues-mainText {
     font-family: 'NanumSquareAceb';
-    color: #4543f8;
-    font-size: 25px;
+    color: #fff;
+    font-size: 40px;
     margin: 5px 0;
 }
-.coreValues-preview-subText {
+.coreValues-subText {
     font-family: 'NanumSquareAcb';
-    color: #444;
-    font-size: 20px;
+    color: #fff;
+    font-size: 30px;
+}
+
+
+#portpolio {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+#portpolio-part {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
 }

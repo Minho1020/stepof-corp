@@ -47,7 +47,7 @@ section {
     align-items: center;
 }
 #add-history-box {
-    border: 3px solid #5786FF;
+    border: 3px solid #4543f8;
     border-radius: 15px;
     cursor: pointer;
     display: flex;
@@ -142,14 +142,14 @@ textarea:focus {
     border-radius: 15px;
     cursor: pointer;
     background-color: white;
-    border: 3px solid #5786FF;
-    color: #5786FF;
+    border: 3px solid #4543f8;
+    color: #4543f8;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 #submit-btn:hover {
-    background-color: #5786FF;
+    background-color: #4543f8;
     color: white;
 }
 #submit-btn:hover > i {
@@ -230,13 +230,13 @@ textarea:focus {
     margin-right: 10px;
 }
 .optionArray-Btn:hover {
-    color: #5786FF;
+    color: #4543f8;
 }
 .option-line {
     border: 0;
     width: 100%;
     height: 2px;
-    background-color: #5786FF;
+    background-color: #4543f8;
     margin: 5px 0;
 }
 .optionYear-Btn {
@@ -256,7 +256,7 @@ textarea:focus {
     margin-right: 20px;
 }
 .optionYear-Btn:hover {
-    color: #5786FF;
+    color: #4543f8;
 }
 .optionYear-Btn:hover >  i{
     display: block;
@@ -275,7 +275,7 @@ textarea:focus {
     cursor: pointer;
 }
 .selected {
-    color: #5786FF;
+    color: #4543f8;
 }
 .selected > .checkIcon {
     display: block;
@@ -321,7 +321,7 @@ textarea:focus {
 }
 .history-icon {
     font-size: 35px;
-    color: #5786FF;
+    color: #4543f8;
 }
 .history-icon > i {
     transform: rotateZ(90deg);
@@ -374,7 +374,7 @@ textarea:focus {
 }
 .history-card-setting > div > div:hover {
     background-color: rgba(0, 0, 0, 0.1);
-    color: #5786FF;
+    color: #4543f8;
 }
 
 #popup-background {
@@ -404,7 +404,7 @@ textarea:focus {
 .popup-wrapper {
     width: 350px;
     height: 400px;
-    background-color: #5786FF;
+    background-color: #4543f8;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -435,7 +435,7 @@ textarea:focus {
     font-size: 20px;
     margin: 5px 0;
     color: white;
-    background-color: #5786FF;
+    background-color: #4543f8;
 }
 #userCheck-btn {
     margin-top: 20px;
@@ -444,8 +444,8 @@ textarea:focus {
     height: 60px;
     border-radius: 15px;
     cursor: pointer;
-    background-color: #5786FF;
-    border: 3px solid #5786FF;
+    background-color: #4543f8;
+    border: 3px solid #4543f8;
     color: white;
     display: flex;
     transition: all .2s;
@@ -463,7 +463,7 @@ textarea:focus {
     font-size: 30px;
     cursor: pointer;
     border: 0;
-    background-color: #5786FF;
+    background-color: #4543f8;
     color: white;
 }
 #popupDes {
@@ -536,14 +536,14 @@ textarea:focus {
     border: none;
     font-family: 'NanumSquareAceb';
     font-size: 15px;
-    background-color: #5787ffca;
-    color:#777;
+    background-color: #4543f8ca;
+    color:#555;
     cursor: pointer;
     padding: 10px 20px;
     margin: 10px;
     border-radius: 5px;
 }
 #edit-history-submit > button:hover {
-    background-color: #5786FF;
+    background-color: #4543f8;
     color: black;
 }

@@ -1,11 +1,11 @@
 #recruit-landing {
     display: flex;
-    margin-top: 77px;
+    margin-top: 63px;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #5786FF;
-    height: 450px;
+    background-color: #4543f8;
+    height: 60vh;
 }
 #recruit {
     margin-top: 50px;

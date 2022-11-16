@@ -89,6 +89,9 @@ $(document).ready(function() {
         }
     }
 
+
+    
+
     const item = document.querySelectorAll(".animateOnScroll"),
         scrollMargin = 80;
 
